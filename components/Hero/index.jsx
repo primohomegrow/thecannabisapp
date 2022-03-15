@@ -1,3 +1,4 @@
+import { useSession, signIn, signOut } from 'next-auth/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBong } from '@fortawesome/pro-thin-svg-icons';
 
@@ -21,7 +22,10 @@ const Hero = () => {
           </p>
           <div className='flex space-x-4 items-center justify-center'>
             <FontAwesomeIcon icon={faBong} size='2x' />
-            <button className='btn btn-primary'>let's grow primo!</button>'
+            <button className='btn btn-primary' onClick={() => signIn()}>
+              let's grow primo!
+            </button>
+            '
             <FontAwesomeIcon icon={faBong} size='2x' />
           </div>
         </div>
