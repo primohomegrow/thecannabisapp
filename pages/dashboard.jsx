@@ -1,4 +1,6 @@
+import Stats from 'components/Stats';
 import { useSession, getSession } from 'next-auth/react';
+import PlantTable from '../components/PlantTable';
 
 const Dashboard = () => {
   const { data: session } = useSession();
@@ -7,7 +9,8 @@ const Dashboard = () => {
   if (session) {
     return (
       <div>
-        <h2 className=''>Dashboard</h2>
+        <Stats />
+        <PlantTable />
       </div>
     );
   }
